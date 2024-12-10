@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Upload a new message {% endblock %}
+
+{% block body %}
+    <form method="post" action="" enctype="multipart/form-data" class="col-sm-4 offset-4 py-5 my-5">
+        {% csrf_token %}
+        <h2>Upload Image!</h2>
+        {{ form.as_p }}
+        <div>
+            <button type="submit" class="btn btn-primary">Submit Form </button>
+        </div>
+    </form>
+{% endblock %}
